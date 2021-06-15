@@ -21,7 +21,25 @@ body {
   font-family: Source Sans Pro, sans-serif;
 }
 nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   font-family: Bungee;
+  background-color:rgb(85, 5, 5);
+}
+.write {
+
+ font-size: 12px;
+  float: right;
+  margin-top: 1.5em ;
+  padding-right: 1.5em;
+
+}
+main {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  background-color: #f4f1ec;
 }
 
 /*
