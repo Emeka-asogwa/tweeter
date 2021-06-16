@@ -5,5 +5,5 @@ header {
 justify-content: center;
 align-items: center;
 background-color:rgba(168, 136, 136, 0.973);
-
+flex-direction: column;
 }
