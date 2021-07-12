@@ -1,11 +1,13 @@
 header {
   margin-top: 120px;
-  
   height: 400px;
   width: 100%;
-  background-color:rgba(168, 136, 136, 0.973);
-justify-content: center;
-align-items: center;
-display: flex;
-flex-direction: column;
+  background-color: rgba(201, 123, 22, 0.973);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-image: url("../images/diagonal-striped-brick.png");
 }
+
+/* background-color: rgba(168, 136, 136, 0.973); */
