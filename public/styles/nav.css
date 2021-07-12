@@ -1,8 +1,8 @@
 nav {
   height: 120px;
   width: 100%;
-  background-color: #4056A1;
-  color:#FFFFFF;
+  background-color: #4056a1;
+  color: #ffffff;
   padding-left: 1.5em;
   padding-right: 1.5em;
   position: fixed;
@@ -10,33 +10,22 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-
-
 }
-
-
-
 
 span {
   font-family: "Bungee";
-  
 }
 .logo {
-
 }
 .write {
-  
-  
-   float: right;
-   margin-top: 1.5em ;
-   padding-right: 1.5em;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
- 
- }
- .write-text {
+  float: right;
+  margin-top: 1.5em;
+  padding-right: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.write-text {
   font-family: Source Sans Pro, sans-serif;
   font-size: 14px;
- }
+}

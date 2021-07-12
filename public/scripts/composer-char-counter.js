@@ -3,7 +3,7 @@ $(document).ready(function() {
   
   $('#tweet-text').on("input", function() {
     
-    console.log(this.value.length)
+    //console.log(this.value.length)
 
     $(".counter")[0].innerHTML = 140 -this.value.length;
     if ($(".counter")[0].innerHTML < 0) {
