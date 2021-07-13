@@ -1,6 +1,32 @@
 button {
-  background-color:cornflowerblue;
-  color:black;
+  background-color: cornflowerblue;
+  color: black;
   padding: 5px;
-  margin:5px
+  margin: 5px;
+  font-family: "Bungee";
+}
+
+textarea {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  background-color: transparent;
+}
+.text-input {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid black;
+  justify-content: space-between;
+  /* padding-right: 20em; */
+}
+
+/* .counter {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+} */
+
+.tweet-submit {
+  display: flex;
+  justify-content: space-between;
 }

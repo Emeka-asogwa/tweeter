@@ -61,14 +61,14 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header>
+    <header >
       <div>
         <img src="/images/profile-hex.png" />
       </div>
       <br />
-      <div>
+      <div class ="username">
         <h2>
-          <button>Emeka Asogwa</button>
+          Emeka Asogwa
         </h2>
       </div>
     </header>
@@ -79,17 +79,29 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
+          <div class="text-input">
+          <label for="tweet-text">What are you humming about?</label>
           <textarea
-            placeholder="What are you humming about?"
+            
             name="text"
             id="tweet-text"
           ></textarea>
-          <div>
+          </div>
+          <div class ="tweet-submit">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
+      <section class="tweet-container">
+<div>
+  Hello world!
+  <script src="dist/timeago.js" type="text/javascript"></script>
+  <script>timeago.format(new Date())</script>
+</div>
+
+      </section>
+
     </main>
   </body>
 </html>
