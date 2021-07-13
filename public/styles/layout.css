@@ -41,8 +41,41 @@ main {
 
 .tweet-container {
   /* border-bottom: solid black; */
+  /* display: flex; */
+  border: 3px solid black;
+  height: 100%;
+  margin-bottom: 50px;
+  padding: 10px 5px;
+}
+.tweet-container:hover {
+  box-shadow: 10px 10px #888888;
+}
+
+.fa-heart:hover {
+  color: darkgoldenrod;
+}
+.fa-flag:hover {
+  color: darkgoldenrod;
+}
+.fa-retweet:hover {
+  color: darkgoldenrod;
+}
+
+.tweet-footer {
+  border-top: 1px solid rosybrown;
+  border-width: 2px;
   display: flex;
-  border: black;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.top-article {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.hello-world {
+  margin: 50px 10px;
 }
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
