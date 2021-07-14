@@ -4,43 +4,43 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const tweetData = {
-  "user": {
-    "name": "Newton",
-    "avatars": "https://i.imgur.com/73hZDYK.png",
-    "handle": "@SirIsaac"
-  },
-  "content": {
-    "text": "If I have seen further it is by standing on the shoulders of giants"
-  },
-  "created_at": 1461116232227
-};
+// const tweetData = {
+//   "user": {
+//     "name": "Newton",
+//     "avatars": "https://i.imgur.com/73hZDYK.png",
+//     "handle": "@SirIsaac"
+//   },
+//   "content": {
+//     "text": "If I have seen further it is by standing on the shoulders of giants"
+//   },
+//   "created_at": 1461116232227
+// };
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
+// const data = [
+//   {
+//     "user": {
+//       "name": "Newton",
+//       "avatars": "https://i.imgur.com/73hZDYK.png"
+//       ,
+//       "handle": "@SirIsaac"
+//     },
+//     "content": {
+//       "text": "If I have seen further it is by standing on the shoulders of giants"
+//     },
+//     "created_at": 1461116232227
+//   },
+//   {
+//     "user": {
+//       "name": "Descartes",
+//       "avatars": "https://i.imgur.com/nlhLi3I.png",
+//       "handle": "@rd"
+//     },
+//     "content": {
+//       "text": "Je pense , donc je suis"
+//     },
+//     "created_at": 1461113959088
+//   }
+// ]
 
 $(document).ready(() => {
 
@@ -68,46 +68,76 @@ $(document).ready(() => {
   };
 
   const renderTweets = function (tweets) {
+    $("#tweets-container").empty();
     for (let tweet of tweets) {
       const $tweetValue = createTweetElement(tweet);
 
-      $("#tweets-container").append($tweetValue);
+      $("#tweets-container").prepend($tweetValue);
     }
   }
-  renderTweets(data);
+  //renderTweets(tweets);
 
   const $button = $(".form");
+
   $button.on("submit", function (event) {
     event.preventDefault();
-    console.log($(this).serialize());
+    //console.log($(this).serialize());
+    //console.log(validateTweet());
+
+    if (validateTweet()) {
+      console.log()
+      $.ajax({
+        url: "/tweets",
+        method: "POST",
+        data: $(this).serialize()
+      })
+        .then((res) => {
+          $("#tweet-text").val("");
+          $(".counter").val(140);
+          $(".counter").css('color', 'black');
+
+          //validateTweet(res);
+
+          loadTweets();
+
+          // const articleContainer = $("#tweets-container");
+          // articleContainer.append(res);
+          // console.log(res);
+
+        })
+    }
+
+  })
+  const loadTweets = function () {
     $.ajax({
       url: "/tweets",
-      method: "POST",
+      method: "GET",
       data: $(this).serialize()
+
     })
       .then((res) => {
-        $("#tweet-text").val("");
-        $(".counter").val(140);
-
-
-        // const articleContainer = $("#tweets-container");
-        // articleContainer.append(res);
         console.log(res);
+        renderTweets(res);
 
       })
 
-  })
+  }
+  loadTweets();
+
+  const validateTweet = () => {
+    const tweetText = $("#tweet-text").val();
+    if (!tweetText || tweetText === '\n') {
+      alert("Can't be empty");
+      return false;
+
+    }
+    else if (tweetText.length > 140) {
+      alert("Too many characters");
+      return false;
+
+    }
+    return true;
+  };
+
 
 })
-
-
-
-
-// const validateTweet = (tweetText) => {
-//   if (!tweetText || tweetText === '\n') {
-//     return "Can't be empty";
-//   }
-//   else if (tweetText.length > 140) {
-//     return "Too many characters";
-//   }
-// };
