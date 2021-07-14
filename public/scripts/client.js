@@ -44,7 +44,6 @@ const data = [
 
 $(document).ready(() => {
 
-
   const createTweetElement = function (tweetData) {
     const $tweet = $(`<article class="load-tweet">
      <article class="top-article">
@@ -67,39 +66,42 @@ $(document).ready(() => {
    </article>`);
     return $tweet;
   };
-  // const $tweet = createTweetElement();
-  // // console.log($tweet);
-  // $('#load-tweet').append($tweet);
-
-  // const $tweet = createTweetElement(tweetData);
-  // // Test / driver code (temporary)
-  // $('#tweets-container').append($tweet);
-
 
   const renderTweets = function (tweets) {
     for (let tweet of tweets) {
       const $tweetValue = createTweetElement(tweet);
 
-      $('#tweets-container').append($tweetValue);
+      $("#tweets-container").append($tweetValue);
     }
   }
-
-
   renderTweets(data);
+
+  const $button = $(".form");
+  $button.on("submit", function (event) {
+    event.preventDefault();
+    console.log($(this).serialize());
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $(this).serialize()
+    })
+      .then((res) => {
+        $("#tweet-text").val("");
+        $(".counter").val(140);
+
+
+        // const articleContainer = $("#tweets-container");
+        // articleContainer.append(res);
+        console.log(res);
+
+      })
+
+  })
+
 })
 
-// $(document).ready(function () {
-//   $("#tweets-container").on("submit", function (event) {
-//     event.preventDefault();
 
-//     const loadTweets = function () {
-//       $.get('/tweets')
-//         .then()
 
-//     }
-
-//   })
-// })
 
 // const validateTweet = (tweetText) => {
 //   if (!tweetText || tweetText === '\n') {
