@@ -53,8 +53,7 @@ $(document).ready(() => {
          <!-- <button -->
        </div>
      </article>
-     <div class="hello-world">${tweetData.content.text}</div>
-
+     <div class="hello-world">${escape(tweetData.content.text)}</div>
      <footer class="tweet-footer">
        <div class="time">${timeago.format((tweetData.created_at))}</div>
        <div class="font-awesome">
@@ -71,19 +70,14 @@ $(document).ready(() => {
     $("#tweets-container").empty();
     for (let tweet of tweets) {
       const $tweetValue = createTweetElement(tweet);
-
       $("#tweets-container").prepend($tweetValue);
     }
   }
   //renderTweets(tweets);
 
   const $button = $(".form");
-
   $button.on("submit", function (event) {
     event.preventDefault();
-    //console.log($(this).serialize());
-    //console.log(validateTweet());
-
     if (validateTweet()) {
       console.log()
       $.ajax({
@@ -95,18 +89,9 @@ $(document).ready(() => {
           $("#tweet-text").val("");
           $(".counter").val(140);
           $(".counter").css('color', 'black');
-
-          //validateTweet(res);
-
           loadTweets();
-
-          // const articleContainer = $("#tweets-container");
-          // articleContainer.append(res);
-          // console.log(res);
-
         })
     }
-
   })
   const loadTweets = function () {
     $.ajax({
@@ -120,7 +105,6 @@ $(document).ready(() => {
         renderTweets(res);
 
       })
-
   }
   loadTweets();
 
@@ -129,15 +113,17 @@ $(document).ready(() => {
     if (!tweetText || tweetText === '\n') {
       alert("Can't be empty");
       return false;
-
     }
     else if (tweetText.length > 140) {
       alert("Too many characters");
       return false;
-
     }
     return true;
   };
 
-
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 })
