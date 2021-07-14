@@ -34,12 +34,15 @@ main {
 .main-section {
   display: flex;
 }
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
 
 .username {
   border-bottom: 2.2px solid green;
 }
 
-.tweet-container {
+.load-tweet {
   /* border-bottom: solid black; */
   /* display: flex; */
   border: 3px solid black;
@@ -47,7 +50,7 @@ main {
   margin-bottom: 50px;
   padding: 10px 5px;
 }
-.tweet-container:hover {
+.load-tweet:hover {
   box-shadow: 10px 10px #888888;
 }
 
@@ -77,6 +80,3 @@ main {
 .hello-world {
   margin: 50px 10px;
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

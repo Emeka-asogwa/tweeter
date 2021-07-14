@@ -61,15 +61,13 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-    <header >
+    <header>
       <div>
         <img src="/images/profile-hex.png" />
       </div>
       <br />
-      <div class ="username">
-        <h2>
-          Emeka Asogwa
-        </h2>
+      <div class="username">
+        <h2>Emeka Asogwa</h2>
       </div>
     </header>
 
@@ -80,47 +78,17 @@
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets">
           <div class="text-input">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea
-            
-            name="text"
-            id="tweet-text"
-          ></textarea>
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea name="text" id="tweet-text"></textarea>
           </div>
-          <div class ="tweet-submit">
+          <div class="tweet-submit">
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <section class="tweet-container">
-<article>
-  <article class="top-article">
-  <div>
-    😬 Rhoda Jacobs
-  </div>
-  <div>
-    @MrsJacobs  
-    
- 
-  </div>
-</article>
-  <div class="hello-world">Hello world!</div>
-
-  <!-- <script src="dist/timeago.js" type="text/javascript"></script>
-  <script>timeago.format(new Date())</script> -->
-
-<footer class="tweet-footer">
-  <div class="time"> 10days ago</div>
-  <div class="font-awesome">
-<i class="fa fa-solid fa-heart"></i>
-<i class="fa fa-solid fa-flag"></i>
-<i class="fa fa-solid fa-retweet"></i>
-</div>
-</footer>
-</article>
+      <section id="tweets-container">
       </section>
-
     </main>
   </body>
 </html>
