@@ -1,0 +1,27 @@
+/* Tablet Breakpoints  */
+@media only screen and (max-width: 1024px) {
+  .all {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  header {
+    margin-top: 0;
+  }
+  nav {
+    background-color: transparent;
+    position: absolute;
+  }
+  main {
+    margin-left: 2em;
+  }
+}
+
+/* Desktop Breakpoints  */
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 45%;
+  }
+  header {
+    max-width: 30%;
+  }
+}

@@ -33,3 +33,8 @@ span {
   color: darkgoldenrod;
   cursor: pointer;
 }
+
+.up-button {
+  border: none;
+  background: none;
+}

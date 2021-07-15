@@ -17,7 +17,7 @@ textarea {
   flex-direction: column;
   border-bottom: solid black;
   justify-content: space-between;
-  /* padding-right: 20em; */
+  padding-top: 1em;
 }
 
 /* .counter {

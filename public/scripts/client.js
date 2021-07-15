@@ -44,6 +44,7 @@
 
 $(document).ready(() => {
 
+
   const createTweetElement = function (tweetData) {
     const $tweet = $(`<article class="load-tweet">
      <article class="top-article">
@@ -78,8 +79,15 @@ $(document).ready(() => {
   const $button = $(".form");
   $button.on("submit", function (event) {
     event.preventDefault();
-    if (validateTweet()) {
-      console.log()
+    if (validateTweet() === true) {
+      if ($(".error-container").length > 0) {
+
+        $(".error-container").slideUp(
+          //"display": "none"
+        );
+
+      }
+
       $.ajax({
         url: "/tweets",
         method: "POST",
@@ -91,6 +99,16 @@ $(document).ready(() => {
           $(".counter").css('color', 'black');
           loadTweets();
         })
+    }
+    else {
+      $(".error").text(validateTweet());
+      // $(".error-container").css({
+      // "display": "flex",
+      // });
+      $(".error-container").slideDown(function () {
+        // setTimeout(() => { $(".error-container").hide() }, 2000);
+      })
+
     }
   })
   const loadTweets = function () {
@@ -111,12 +129,12 @@ $(document).ready(() => {
   const validateTweet = () => {
     const tweetText = $("#tweet-text").val();
     if (!tweetText || tweetText === '\n') {
-      alert("Can't be empty");
-      return false;
+      //alert("Can't be empty");
+      return "Can't be empty";
     }
     else if (tweetText.length > 140) {
-      alert("Too many characters");
-      return false;
+      //alert("Too many characters");
+      return "Too many characters";
     }
     return true;
   };

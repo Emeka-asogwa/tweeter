@@ -21,9 +21,9 @@ body {
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
 }
 
 main {
@@ -38,9 +38,9 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-.username {
+/* .username {
   border-bottom: 2.2px solid green;
-}
+} */
 
 .load-tweet {
   /* border-bottom: solid black; */
@@ -79,4 +79,43 @@ main {
 }
 .hello-world {
   margin: 50px 10px;
+}
+
+.error-container {
+  display: none;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 2px solid red;
+  margin-top: 20px;
+  padding: 10px 10px;
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s;
+  animation-iteration-count: infinite;
+  color: red;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-12px);
+  }
+}
+
+.all {
+  display: flex;
+  flex-direction: row;
+  margin-top: 130px;
+  justify-content: space-around;
 }

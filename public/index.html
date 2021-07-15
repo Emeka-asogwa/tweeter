@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <!-- Meta Information -->
+
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
@@ -39,6 +40,7 @@
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/responsiveDesign.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -53,42 +55,57 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
+
     <nav>
       <span class="logo">Tweeter</span>
-      <div class="write">
-        <span class="write-text"><strong>Write</strong> a new tweet </span>
+      <button class="up-button">
+        <div class="write">
+          <span class="write-text"><strong>Write</strong> a new tweet </span>
 
-        <i class="fas fa-angle-double-down"></i>
-      </div>
+          <i class="fas fa-angle-double-down bounce"></i>
+        </div>
+      </button>
     </nav>
-    <header>
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div class="username">
-        <h2>Emeka Asogwa</h2>
-      </div>
-    </header>
+    <div class="all">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div class="username">
+          <h2>Emeka Asogwa</h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
+      <!-- Page-specific (main) content here -->
 
-    <main class="container">
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form class="form" method="POST" action="/tweets">
-          <div class="text-input">
-            <label for="tweet-text">What are you humming about?</label>
-            <textarea name="text" id="tweet-text"></textarea>
+      <main class="container">
+        <section class="new-tweet">
+          <!-- <div class="hidden"> -->
+
+          <div class="error-container">
+            <i class="fas fa-exclamation-triangle"></i>
+            <strong class="error"></strong>
+            <i class="fas fa-exclamation-triangle"></i>
+
+            <!-- </div> -->
           </div>
-          <div class="tweet-submit">
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section id="tweets-container">
-      </section>
-    </main>
+          <form class="form" method="POST" action="/tweets">
+            <div class="text-input">
+              <label for="tweet-text">What are you humming about?</label>
+              <textarea name="text" id="tweet-text"></textarea>
+            </div>
+            <div class="tweet-submit">
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+        <i class="fas fa-angle-double-up backToTop"></i>
+      </main>
+    </div>
   </body>
 </html>
