@@ -23,4 +23,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots of the App
 
-!["Descr"](URL)
+!["Tweeter main page for desktop"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/mainPage.jpg)
+!["Tweeter main page for tablet size device"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tabletSize.jpg)
+!["Shows we cant submit an empty tweet"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/emptytweet.png)
+
+!["Shows we cant submit tweet with more than 140 characters"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tooMany.png)
+!["Shows the arrow-up button that takes client up to main page"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/arrowUp.png)
+![""]()
