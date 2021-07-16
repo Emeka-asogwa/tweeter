@@ -15,15 +15,11 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
   font-family: Source Sans Pro, sans-serif;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
 }
 
 main {
@@ -38,18 +34,22 @@ main {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
-/* .username {
-  border-bottom: 2.2px solid green;
-} */
+.names {
+  padding-left: 0.5em;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
 
 .load-tweet {
-  /* border-bottom: solid black; */
-  /* display: flex; */
   border: 3px solid black;
   height: 100%;
   margin-bottom: 50px;
   padding: 10px 5px;
 }
+
 .load-tweet:hover {
   box-shadow: 10px 10px #888888;
 }
@@ -57,9 +57,11 @@ main {
 .fa-heart:hover {
   color: darkgoldenrod;
 }
+
 .fa-flag:hover {
   color: darkgoldenrod;
 }
+
 .fa-retweet:hover {
   color: darkgoldenrod;
 }
@@ -72,11 +74,13 @@ main {
   justify-content: space-between;
   padding-top: 10px;
 }
+
 .top-article {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
+
 .hello-world {
   margin: 50px 10px;
 }
@@ -91,31 +95,23 @@ main {
   text-align: center;
 }
 
-.bounce {
-  animation: bounce 2s;
-  animation-iteration-count: infinite;
-  color: red;
-}
-
-@keyframes bounce {
-  0%,
-  25%,
-  50%,
-  75%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-12px);
-  }
-}
-
 .all {
   display: flex;
   flex-direction: row;
   margin-top: 130px;
   justify-content: space-around;
+}
+
+.up-button {
+  display: none;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  color: white;
+  border-radius: 300%;
+  background-color: red;
+}
+
+.up-button:hover {
+  background-color: darkgoldenrod;
 }

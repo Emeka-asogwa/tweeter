@@ -4,13 +4,16 @@
     flex-direction: column;
     margin-top: 0;
   }
+
   header {
     margin-top: 0;
   }
+
   nav {
     background-color: transparent;
     position: absolute;
   }
+
   main {
     margin-left: 2em;
   }
@@ -21,6 +24,7 @@
   main {
     max-width: 45%;
   }
+
   header {
     max-width: 30%;
   }

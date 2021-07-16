@@ -20,12 +20,6 @@ textarea {
   padding-top: 1em;
 }
 
-/* .counter {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-} */
-
 .tweet-submit {
   display: flex;
   justify-content: space-between;
