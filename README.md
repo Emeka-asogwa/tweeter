@@ -23,10 +23,15 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots of the App
 
-!["Gif file for tweet App"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tweet3.gif)
-!["Tweeter main page for desktop"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/mainPage.jpg)
-!["Tweeter main page for tablet size device"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tabletSize.jpg)
-!["Shows we cant submit an empty tweet"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/emptytweet.png)
-
-!["Shows we cant submit tweet with more than 140 characters"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tooMany.png)
-!["Shows the arrow-up button that takes client up to main page"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/arrowUp.png)
+- 1. Gif file for tweet App
+     !["Gif file for tweet App"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tweet3.gif)
+- 2. Tweeter main page for desktop
+     !["Tweeter main page for desktop"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/mainPage.jpg)
+- 3. Tweeter main page for tablet size device
+     !["Tweeter main page for tablet size device"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tabletSize.jpg)
+- 4. Shows we cant submit an empty tweet  
+     !["Shows we cant submit an empty tweet"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/emptytweet.png)
+- 5. Shows we cant submit tweet with more than 140 characters
+     !["Shows we cant submit tweet with more than 140 characters"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/tooMany.png)
+- 6. Shows the arrow-up button that takes client up to main page
+     !["Shows the arrow-up button that takes client up to main page"](https://github.com/Emeka-asogwa/tweeter/blob/master/docs/arrowUp.png)
