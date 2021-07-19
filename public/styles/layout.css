@@ -115,3 +115,7 @@ main {
 .up-button:hover {
   background-color: darkgoldenrod;
 }
+
+.container {
+  overflow-wrap: break-word;
+}
